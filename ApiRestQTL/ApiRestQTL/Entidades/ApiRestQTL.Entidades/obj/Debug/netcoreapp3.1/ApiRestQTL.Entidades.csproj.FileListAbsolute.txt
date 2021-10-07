@@ -1,0 +1,8 @@
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Entidades\ApiRestQTL.Entidades\bin\Debug\netcoreapp3.1\ApiRestQTL.Entidades.deps.json
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Entidades\ApiRestQTL.Entidades\bin\Debug\netcoreapp3.1\ApiRestQTL.Entidades.dll
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Entidades\ApiRestQTL.Entidades\bin\Debug\netcoreapp3.1\ApiRestQTL.Entidades.pdb
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Entidades\ApiRestQTL.Entidades\obj\Debug\netcoreapp3.1\ApiRestQTL.Entidades.AssemblyInfoInputs.cache
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Entidades\ApiRestQTL.Entidades\obj\Debug\netcoreapp3.1\ApiRestQTL.Entidades.AssemblyInfo.cs
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Entidades\ApiRestQTL.Entidades\obj\Debug\netcoreapp3.1\ApiRestQTL.Entidades.csproj.CoreCompileInputs.cache
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Entidades\ApiRestQTL.Entidades\obj\Debug\netcoreapp3.1\ApiRestQTL.Entidades.dll
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Entidades\ApiRestQTL.Entidades\obj\Debug\netcoreapp3.1\ApiRestQTL.Entidades.pdb
