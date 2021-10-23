@@ -46,19 +46,6 @@ namespace ApiRestQTL.Web.Controllers
             });
         }
 
-        // GET: api/Clientes/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Cliente>> GetCliente(int id)
-        {
-            var cliente = await _context.Clientes.FindAsync(id);
-
-            if (cliente == null)
-            {
-                return NotFound();
-            }
-
-            return cliente;
-        }
 
         // GET: api/Clientes/Mostrar/5
         [HttpGet("[action]/{id}")]

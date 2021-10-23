@@ -1,0 +1,15 @@
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Datos\ApiRestQTL.Datos\bin\Release\netcoreapp3.1\ApiRestQTL.Datos.deps.json
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Datos\ApiRestQTL.Datos\bin\Release\netcoreapp3.1\ApiRestQTL.Datos.runtimeconfig.json
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Datos\ApiRestQTL.Datos\bin\Release\netcoreapp3.1\ApiRestQTL.Datos.runtimeconfig.dev.json
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Datos\ApiRestQTL.Datos\bin\Release\netcoreapp3.1\ApiRestQTL.Datos.dll
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Datos\ApiRestQTL.Datos\bin\Release\netcoreapp3.1\ApiRestQTL.Datos.pdb
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Datos\ApiRestQTL.Datos\bin\Release\netcoreapp3.1\ApiRestQTL.Entidades.dll
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Datos\ApiRestQTL.Datos\bin\Release\netcoreapp3.1\ApiRestQTL.Entidades.pdb
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Datos\ApiRestQTL.Datos\obj\Release\netcoreapp3.1\ApiRestQTL.Datos.csprojAssemblyReference.cache
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Datos\ApiRestQTL.Datos\obj\Release\netcoreapp3.1\ApiRestQTL.Datos.AssemblyInfoInputs.cache
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Datos\ApiRestQTL.Datos\obj\Release\netcoreapp3.1\ApiRestQTL.Datos.AssemblyInfo.cs
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Datos\ApiRestQTL.Datos\obj\Release\netcoreapp3.1\ApiRestQTL.Datos.csproj.CoreCompileInputs.cache
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Datos\ApiRestQTL.Datos\obj\Release\netcoreapp3.1\ApiRestQTL.Datos.csproj.CopyComplete
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Datos\ApiRestQTL.Datos\obj\Release\netcoreapp3.1\ApiRestQTL.Datos.dll
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Datos\ApiRestQTL.Datos\obj\Release\netcoreapp3.1\ApiRestQTL.Datos.pdb
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Datos\ApiRestQTL.Datos\obj\Release\netcoreapp3.1\ApiRestQTL.Datos.genruntimeconfig.cache
