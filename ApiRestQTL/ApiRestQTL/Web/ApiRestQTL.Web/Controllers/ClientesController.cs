@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ApiRestQTL.Datos;
@@ -77,20 +76,82 @@ namespace ApiRestQTL.Web.Controllers
             );
         }
 
-
-
-        // PUT: api/Clientes/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutCliente(int id, Cliente cliente)
+        //POST: api/Clientes/Crear
+        [HttpPost("[action]")]
+        public async Task<IActionResult> Crear([FromBody] CrearViewModel model)
         {
-            if (id != cliente.nIdCliente)
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            Cliente cliente = new Cliente
+            {
+                sEmail = model.sEmail,
+                sEstado = "1",
+                sCodigoDocumento = model.sCodigoDocumento,
+                sDireccionCliente = model.sDireccionCliente,
+                sIdDepartamento = model.sIdDepartamento,
+                sIdProvincia = model.sIdProvincia,
+                sIdDistrito = model.sIdDistrito,
+                sObservacion = model.sObservacion,
+                sNumeroCelular = model.sNumeroCelular,
+                sNumeroTelefono = model.sNumeroTelefono,
+                sNumeroDocumento = model.sNumeroDocumento,
+                sNombreCliente = model.sNombreCliente,
+                dFechaCreacion = DateTime.Today,
+                dFechaUltimaActualiza = DateTime.Today
+            };
+
+            _context.Clientes.Add(cliente);
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+
+            catch (Exception ex)
+            {
+
+                return BadRequest();
+            }
+
+            return Ok();
+        }
+
+
+        //PUT: api/Clientes/Actualizar
+        [HttpPut("[action]")]
+        public async Task<IActionResult> Actualizar([FromBody] ActualizarViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (model.nIdCliente <= 0)
             {
                 return BadRequest();
             }
 
-            _context.Entry(cliente).State = EntityState.Modified;
+            var cliente = await _context.Clientes.FirstOrDefaultAsync(c => c.nIdCliente == model.nIdCliente);
+
+            if (cliente == null)
+            {
+                return NotFound();
+            }
+
+            cliente.sEmail = model.sEmail.ToLower();
+            cliente.sNombreCliente = model.sNombreCliente;
+            cliente.sNumeroCelular = model.sNumeroCelular;
+            cliente.sNumeroDocumento = model.sNumeroDocumento;
+            cliente.sNumeroTelefono = model.sNumeroTelefono;
+            cliente.sIdDepartamento = model.sIdDepartamento;
+            cliente.sIdProvincia = model.sIdProvincia;
+            cliente.sIdDistrito = model.sIdDistrito;
+            cliente.sCodigoDocumento = model.sCodigoDocumento;
+            cliente.sDireccionCliente = model.sDireccionCliente;
+            cliente.sObservacion = model.sObservacion;
+            cliente.dFechaUltimaActualiza = DateTime.Today;            
 
             try
             {
@@ -98,47 +159,11 @@ namespace ApiRestQTL.Web.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ClienteExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return BadRequest();
             }
 
-            return NoContent();
+            return Ok();
         }
-
-        // POST: api/Clientes
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost]
-        public async Task<ActionResult<Cliente>> PostCliente(Cliente cliente)
-        {
-            _context.Clientes.Add(cliente);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetCliente", new { id = cliente.nIdCliente }, cliente);
-        }
-
-        // DELETE: api/Clientes/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Cliente>> DeleteCliente(int id)
-        {
-            var cliente = await _context.Clientes.FindAsync(id);
-            if (cliente == null)
-            {
-                return NotFound();
-            }
-
-            _context.Clientes.Remove(cliente);
-            await _context.SaveChangesAsync();
-
-            return cliente;
-        }
-
         private bool ClienteExists(int id)
         {
             return _context.Clientes.Any(e => e.nIdCliente == id);

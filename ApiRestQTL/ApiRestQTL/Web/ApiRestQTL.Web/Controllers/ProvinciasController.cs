@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using ApiRestQTL.Datos;
 using ApiRestQTL.Entidades.Ubigeo;
 using ApiRestQTL.Web.Models.Ubigeo;
+using ApiRestQTL.Web.Models.Ubigeo.Provincia;
 
 namespace ApiRestQTL.Web.Controllers
 {
@@ -56,6 +57,21 @@ namespace ApiRestQTL.Web.Controllers
             }
             );
         }
+
+        // GET: api/Provincias/Select/15
+        [HttpGet("[action]/{id}")]
+        public async Task<IEnumerable<SelectViewModel>> Select(string id)
+        {
+            var provincia = await _context.Provincias.Where(p => p.sIdDepartamento == id).ToListAsync();
+
+            return provincia.Select(p => new SelectViewModel
+            {
+                sIdProvincia = p.sIdProvincia,
+                sDesProvincia = p.sDesProvincia
+            });
+        }
+
+
 
         // PUT: api/Provincias/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for

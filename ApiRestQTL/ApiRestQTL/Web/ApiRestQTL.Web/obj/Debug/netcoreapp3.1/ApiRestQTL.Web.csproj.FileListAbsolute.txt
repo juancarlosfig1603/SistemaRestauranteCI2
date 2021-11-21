@@ -1,3 +1,10 @@
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\linux-armel\native\libe_sqlite3.so
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\obj\Debug\netcoreapp3.1\ApiRestQTL.Web.csprojAssemblyReference.cache
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\obj\Debug\netcoreapp3.1\ApiRestQTL.Web.AssemblyInfoInputs.cache
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\obj\Debug\netcoreapp3.1\ApiRestQTL.Web.AssemblyInfo.cs
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\obj\Debug\netcoreapp3.1\ApiRestQTL.Web.csproj.CoreCompileInputs.cache
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\obj\Debug\netcoreapp3.1\ApiRestQTL.Web.MvcApplicationPartsAssemblyInfo.cache
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\ApiRestQTL.Web.exe
@@ -62,6 +69,7 @@ D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\b
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
@@ -125,9 +133,7 @@ D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\b
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\alpine-x64\native\libe_sqlite3.so
-D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\native\libe_sqlite3.so
-D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\linux-armel\native\libe_sqlite3.so
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\linux-mips64\native\libe_sqlite3.so
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\linux-musl-x64\native\libe_sqlite3.so
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libe_sqlite3.so
@@ -137,6 +143,8 @@ D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\b
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
@@ -144,11 +152,6 @@ D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\b
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\ApiRestQTL.Entidades.dll
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\ApiRestQTL.Datos.pdb
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\bin\Debug\netcoreapp3.1\ApiRestQTL.Entidades.pdb
-D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\obj\Debug\netcoreapp3.1\ApiRestQTL.Web.csprojAssemblyReference.cache
-D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\obj\Debug\netcoreapp3.1\ApiRestQTL.Web.AssemblyInfoInputs.cache
-D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\obj\Debug\netcoreapp3.1\ApiRestQTL.Web.AssemblyInfo.cs
-D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\obj\Debug\netcoreapp3.1\ApiRestQTL.Web.csproj.CoreCompileInputs.cache
-D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\obj\Debug\netcoreapp3.1\ApiRestQTL.Web.MvcApplicationPartsAssemblyInfo.cache
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\obj\Debug\netcoreapp3.1\staticwebassets\ApiRestQTL.Web.StaticWebAssets.Manifest.cache
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\obj\Debug\netcoreapp3.1\staticwebassets\ApiRestQTL.Web.StaticWebAssets.xml
 D:\Repositories\SistemaRestauranteCI2\ApiRestQTL\ApiRestQTL\Web\ApiRestQTL.Web\obj\Debug\netcoreapp3.1\scopedcss\bundle\ApiRestQTL.Web.styles.css

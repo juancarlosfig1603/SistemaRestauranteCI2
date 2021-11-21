@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ApiRestQTL.Datos;
 using ApiRestQTL.Entidades.Productos;
 using ApiRestQTL.Web.Models.Productos;
-using System.Data.SqlClient;
 using System.Data;
 
 namespace ApiRestQTL.Web.Controllers
@@ -65,10 +62,28 @@ namespace ApiRestQTL.Web.Controllers
             );
         }
 
-            // PUT: api/Productos/5
-            // To protect from overposting attacks, enable the specific properties you want to bind to, for
-            // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-            [HttpPut("{id}")]
+        // GET: api/Productos/MostrarTipo/1
+        [HttpGet("[action]/{idTipo}")]
+        public async Task<IEnumerable<ProductoViewModel>> MostrarTipo(int idTipo)
+        {
+            var producto = await _context.Productos.Where(p => p.nTipoProducto == idTipo).ToListAsync();
+
+            return producto.Select(p => new ProductoViewModel
+            {
+                IdProducto = p.nIdProducto,
+                DescripcionProducto = p.sDescripcionProducto,
+                TipoProducto = p.nTipoProducto,
+                PrecioUnitario = p.nPrecioUnitario,
+                PrecioUnitarioIGV = p.nPrecioUnitarioIGV,
+                Estado = p.sEstado
+            });
+        }
+
+
+        // PUT: api/Productos/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
         public async Task<IActionResult> PutProducto(int id, Producto producto)
         {
             if (id != producto.nIdProducto)

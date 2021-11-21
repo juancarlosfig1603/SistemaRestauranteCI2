@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using ApiRestQTL.Datos;
 using ApiRestQTL.Entidades.Ubigeo;
 using ApiRestQTL.Web.Models.Ubigeo;
+using ApiRestQTL.Web.Models.Ubigeo.Distrito;
 
 namespace ApiRestQTL.Web.Controllers
 {
@@ -54,6 +55,19 @@ namespace ApiRestQTL.Web.Controllers
                 sDesDistrito = distrito.sDesDistrito,
                 sIdProvincia = distrito.sIdProvincia            }
             );
+        }
+
+        // GET: api/Distritos/Select/1501
+        [HttpGet("[action]/{id}")]
+        public async Task<IEnumerable<SelectViewModel>> Select(string id)
+        {
+            var distrito = await _context.Distritos.Where(d => d.sIdProvincia == id).ToListAsync();
+
+            return distrito.Select(d => new SelectViewModel
+            {
+                sIdDistrito = d.sIdDistrito,
+                sDesDistrito = d.sDesDistrito
+            });
         }
 
         // PUT: api/Distritos/5

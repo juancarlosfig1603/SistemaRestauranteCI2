@@ -5,7 +5,7 @@ using ApiRestQTL.Entidades.Productos;
 
 namespace ApiRestQTL.Datos.Mapping.Productos
 {
-    public class ProductosMap : IEntityTypeConfiguration<Producto>
+    public class ProductoMap : IEntityTypeConfiguration<Producto>
     {
         public void Configure(EntityTypeBuilder<Producto> builder)
         {
