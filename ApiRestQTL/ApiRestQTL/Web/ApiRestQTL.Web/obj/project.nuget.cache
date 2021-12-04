@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "cVScOxfXuOJjz5aownvbqcd596SCYjrmVoOVRZY7sRqz+sO5cH1OLLzAFAHxXhPN6HOAR+5EMMxHFUG4mwToHQ==",
+  "dgSpecHash": "lUTAznRNmwO9JVYX1HUpTuMxBNOOnC31Ky6DfrhJBmBXeM+4gAao7CjVipXVjlBu7idadJHoyzQMVPv2gBV6qw==",
   "success": true,
   "projectFilePath": "D:\\Repositories\\SistemaRestauranteCI2\\ApiRestQTL\\ApiRestQTL\\Web\\ApiRestQTL.Web\\ApiRestQTL.Web.csproj",
   "expectedPackageFiles": [
+    "D:\\Users\\JuanCarlos.Figueroa\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.2\\microsoft.aspnetcore.authentication.jwtbearer.3.1.2.nupkg.sha512",
     "D:\\Users\\JuanCarlos.Figueroa\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "D:\\Users\\JuanCarlos.Figueroa\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "D:\\Users\\JuanCarlos.Figueroa\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",

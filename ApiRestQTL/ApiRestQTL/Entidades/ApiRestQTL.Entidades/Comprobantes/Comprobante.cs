@@ -1,5 +1,6 @@
 ﻿using ApiRestQTL.Entidades.Clientes;
 using ApiRestQTL.Entidades.Estados;
+using ApiRestQTL.Entidades.Usuarios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -26,6 +27,8 @@ namespace ApiRestQTL.Entidades.Comprobantes
         public string sEstado { get; set; }
         public DateTime dFechaCreacion { get; set; }
         public bool bEnvioSunat { get; set; }
+        public int nIdUsuario { get; set; }
+        public string sObservaciones { get; set; }
         public ICollection<ComprobanteDetalle> detalles { get; set; }
         [ForeignKey("sEstado")]
         public Estado estado { get; set; }
@@ -33,5 +36,7 @@ namespace ApiRestQTL.Entidades.Comprobantes
         public Cliente cliente { get; set; }
         [ForeignKey("sCodigoComprobante")]
         public ComprobanteTipo comprobanteTipo { get; set; }
+        [ForeignKey("nIdUsuario")]
+        public Usuario usuario { get; set; }
     }
 }

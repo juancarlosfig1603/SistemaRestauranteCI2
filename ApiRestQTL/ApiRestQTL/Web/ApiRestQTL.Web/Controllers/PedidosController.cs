@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using ApiRestQTL.Datos;
 using ApiRestQTL.Entidades.Pedidos;
 using ApiRestQTL.Web.Models.Pedidos;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ApiRestQTL.Web.Controllers
 {
@@ -17,6 +18,7 @@ namespace ApiRestQTL.Web.Controllers
     {
         private readonly DbContextApiRestQTL _context;
 
+
         public PedidosController(DbContextApiRestQTL context)
         {
             _context = context;
@@ -24,7 +26,8 @@ namespace ApiRestQTL.Web.Controllers
 
 
         // GET: api/Pedidos/Listar
-        //  [Authorize(Roles = "Almacenero, Administrador")]
+        // [Authorize(Roles = "Almacenero, Administrador")]
+        // [Authorize]
         [HttpGet("[action]")]
         public async Task<IEnumerable<PedidoViewModel>> Listar()
         {
@@ -53,7 +56,7 @@ namespace ApiRestQTL.Web.Controllers
             }); ;
         }
 
-        // GET: api/Ingresos/ListarFiltro
+        // GET: api/Ingresos/Mostrar
         //  [Authorize(Roles = "Almacenero, Administrador")]
         [HttpGet("[action]/{idPedido}")]
         public async Task<IEnumerable<PedidoViewModel>> Mostrar([FromRoute] int idPedido)
@@ -132,23 +135,20 @@ namespace ApiRestQTL.Web.Controllers
                 nTotal = model.Total,
                 sEstado = "2",
                 dUltimaFechaModifica = DateTime.Now
-
             };
 
             try
             {
-                await _context.SaveChangesAsync();
                 _context.Pedidos.Add(pedido);
+                await _context.SaveChangesAsync();                
 
-                //var idpedido = pedido.nIdPedidoCabecera;
-
-                int lastidpedido = _context.Pedidos.Max(p => p.nIdPedidoCabecera);
+                var idpedido = pedido.nIdPedidoCabecera;
 
                 foreach (var det in model.Detalles)
                 {
                     PedidoDetalle detalle = new PedidoDetalle
                     {
-                        nIdPedidoCabecera = lastidpedido + 1,
+                        nIdPedidoCabecera = idpedido,
                         nSecuencia = det.Secuencia,
                         nIdProducto = det.IdProducto,
                         nCantidad = det.Cantidad,
@@ -160,7 +160,6 @@ namespace ApiRestQTL.Web.Controllers
                     _context.PedidosDetalles.Add(detalle);
                 }
                 await _context.SaveChangesAsync();
-
             }
             catch (Exception ex)
             {

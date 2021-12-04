@@ -12,7 +12,8 @@ namespace ApiRestQTL.Entidades.Comprobantes
         public int nIdComprobanteDetalle { get; set; } 
         public int nIdComprobanteCabecera { get; set; }
         public int nSecuencia { get; set; } 
-        public int nIdProducto { get; set; } 
+        public int nIdProducto { get; set; }
+        public decimal nCantidad { get; set; }
         public decimal nPrecioUnitario { get; set; }
         public decimal nPrecioUnitarioIGV { get; set; }
         public decimal nSubTotal { get; set; } 

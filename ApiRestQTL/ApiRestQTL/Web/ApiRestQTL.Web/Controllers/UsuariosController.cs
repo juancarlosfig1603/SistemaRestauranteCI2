@@ -34,7 +34,7 @@ namespace ApiRestQTL.Web.Controllers
         public async Task<IActionResult> Login(LoginViewModel model)
         {
             var email = model.eMail.ToLower();
-            var usuario = await _context.Usuarios.Where(u => u.sEstado == "1").FirstOrDefaultAsync(u => u.sEmail == email);
+            var usuario = await _context.Usuarios.Include(t => t.tipo).Where(u => u.sEstado == "1").FirstOrDefaultAsync(u => u.sEmail == email);
 
             if (usuario == null)
             {
@@ -56,10 +56,17 @@ namespace ApiRestQTL.Web.Controllers
                 new Claim("nombre", usuario.sNombre )
             };
 
-            return Ok(
-                    new { token = GenerarToken(claims) }
-                );
+            //return Ok(
+            //        new { token = GenerarToken(claims) }
+            //    );
 
+            return Ok(
+                new {
+                    User = usuario.sLogin,
+                    Nombres = usuario.sNombre,
+                    Tipo = usuario.tipo.sDescripcionTipoUsuario,
+                    Token = CrearToken(usuario) }
+                );
         }
 
 
@@ -262,19 +269,41 @@ namespace ApiRestQTL.Web.Controllers
             }
         }
 
-        private string GenerarToken(List<Claim> claims)
+        //private string GenerarToken(List<Claim> claims)
+        //{
+        //    var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+        //    var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+        //    var token = new JwtSecurityToken(
+        //      _config["Jwt:Issuer"],
+        //      _config["Jwt:Issuer"],
+        //      expires: DateTime.Now.AddMinutes(30),
+        //      signingCredentials: creds,
+        //      claims: claims);
+
+        //    return new JwtSecurityTokenHandler().WriteToken(token);
+        //}
+
+        public string CrearToken(Usuario usuario)
         {
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var claims = new List<Claim>();
+            new Claim(JwtRegisteredClaimNames.NameId, usuario.sLogin);
 
-            var token = new JwtSecurityToken(
-              _config["Jwt:Issuer"],
-              _config["Jwt:Issuer"],
-              expires: DateTime.Now.AddMinutes(30),
-              signingCredentials: creds,
-              claims: claims);
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Mi palabra secreta"));
+            var credenciales = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+            var tokenDescripcion = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.Now.AddDays(1),
+                SigningCredentials = credenciales
+            };
 
-            return new JwtSecurityTokenHandler().WriteToken(token);
+            var tokenManejador = new JwtSecurityTokenHandler();
+            var token = tokenManejador.CreateToken(tokenDescripcion);
+
+            return tokenManejador.WriteToken(token);
+
+
         }
 
         private bool UsuarioExists(int id)
