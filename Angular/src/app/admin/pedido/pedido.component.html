@@ -1,0 +1,115 @@
+<body class="  "  style="background:url(assets/img/pedido/dashboard.png);    background-attachment: fixed;
+    background-size: cover;">
+    <!-- loader Start -->
+    <app-menu></app-menu>
+    
+    <main class="main-content">
+        <div class="position-relative">
+            <app-header></app-header>
+        </div>
+    
+        <div class="content-inner mt-5 py-0">
+            <div class="row">
+                <div class="col">
+                    <div class="card bg-transparent">
+                        <div class="card-header d-flex align-items-center justify-content-between p-0 m-0 border-bottom-0">
+                            <div class="header-title">
+                                <h4 class="card-title">Pedidos Activos</h4>
+                            </div>
+                        </div>
+                        <!-- <div class="card-body px-0">
+                            <div class="iq-col-masonry m-0">
+                                <button type="button" class="btn btn-outline-success rounded iq-col-masonry-block">
+                                    <svg class="me-1" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.667969 4.09434L3.93567 7.33366L10.668 0.666992" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    #345
+                                </button>
+                                <button type="button" class="btn btn-outline-danger rounded iq-col-masonry-block">
+                                    <svg class="me-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.6654 5.33496L5.33203 10.6683" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10.6643 10.6663L5.33203 5.33301" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    #325
+                                </button>
+                                <button type="button" class="btn btn-outline-success rounded iq-col-masonry-block">
+                                    <svg class="me-1" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.667969 4.09434L3.93567 7.33366L10.668 0.666992" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    #305
+                                </button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4">
+                <div class="col" *ngFor="let obj of listaPedidos; let i = index">
+                    <div class="card order-history-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-5">
+                                <div class="">
+                                    <h6 class="heading-title mb-2">Order #{{ obj.mesaId}}</h6>
+                                    <p class="mb-0">{{ obj.fecha }}</p>
+                                </div>
+                                <img src="assets/img/pedido/01.png" class="img-fluid rounded-pill avatar-50" alt="">
+                            </div>
+
+                            <button class="btn btn-icon btn-outline-success rounded ctc-button" data-action="click" data-closest="#action-01" data-status="complete">
+                                {{ obj.estado }}
+                            </button>
+
+                            <!-- <div class="d-flex" *ngFor="let objss of obj.detalles;">
+                                <div class="ms-4 order-history">
+                                    <h6 class="mb-2 heading-title fw-bolder">{{ objss.Producto }}</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="heading-title fw-bolder">S/. {{ objss.SubTotal}}</h6>
+                                        <h6 class="heading-title fw-bolder" style="    padding-left: 30px;">Qty : {{ objss.Cantidad}}</h6>
+                                    </div>
+                                    <hr class="my-4">
+                                </div>
+                            </div> -->
+                            <p>{{ obj.obs }}</p>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="">
+                                    <p class="mb-0">{{ obj.cantPerso }} items</p>
+                                    <h6 class="heading-title fw-bolder">IGV {{ obj.igv }}</h6>
+                                    <h6 class="heading-title fw-bolder">Sub Total {{ obj.subtotal }}</h6>
+                                    <h6 class="heading-title fw-bolder">S/. {{ obj.total }}</h6>
+                                </div>
+                                <div class="d-flex align-items-center" id="action-01">
+                                    <!-- <button class="btn btn-icon btn-outline-success rounded ctc-button" data-action="click" data-closest="#action-01" data-status="complete">
+                                        <span class="btn-inner d-flex align-items-center">
+                                            <span>
+                                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.667969 4.09434L3.93567 7.33366L10.668 0.666992" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </span>
+                                            <span class="status pe-2">Completed</span>
+                                        </span>
+                                    </button> -->
+                                    <button class="btn btn-icon btn-outline-info rounded ctc-button" data-action="click" data-closest="#action-01" data-status="complete">
+                                        <i>Ver Detalle</i>
+                                    </button>
+                                    <!-- <button class="btn btn-icon btn-outline-danger rounded ctc-button ms-3" data-action="click" data-closest="#action-01" data-status="reject">
+                                        <span class="btn-inner d-flex align-items-center">
+                                            <span>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10.6654 5.33496L5.33203 10.6683" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M10.6643 10.6663L5.33203 5.33301" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </span>
+                                            <span class="status pe-2">Rejected</span>
+                                        </span>
+                                    </button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+                
+            </div>
+        </div>
+    </main>
+</body>

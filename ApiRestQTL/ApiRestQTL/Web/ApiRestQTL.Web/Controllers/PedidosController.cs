@@ -93,7 +93,7 @@ namespace ApiRestQTL.Web.Controllers
         public async Task<IEnumerable<PedidoDetalleViewModel>> ListarDetalles([FromRoute] int idPedido)
         {
             var detalle = await _context.PedidosDetalles
-                .Include(p => p.nIdProducto)
+                .Include(p => p.producto)
                 .Where(d => d.nIdPedidoCabecera == idPedido)
                 .ToListAsync();
 
